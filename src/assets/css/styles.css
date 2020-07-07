@@ -1,0 +1,98 @@
+/* --------Importar Fuentes-------------- */
+@font-face{
+    font-family: 'yanone';
+    src: url(../fonts/yanone.ttf);
+}
+@font-face{
+    font-family: 'titilium';
+    src: url(../fonts/titilium.ttf);
+}
+
+
+/* -------Generales-------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: titilium , Arial, Helvetica;
+}
+
+body{
+    font-size: 18px;
+    background-color: rgb(231, 231, 231);
+    background-attachment: fixed;
+}
+
+.clearfix{
+    float : none;
+    clear: both;
+}
+
+/* ------- Barra de Navegacion --------*/
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    background-color: rgb(49, 49, 255, 0.6);
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 3px 2px rgb(0, 0, 0, 0.4);
+    margin-bottom: 13px;
+}
+
+#navbar{
+    width: 100%;
+}
+
+#navbar li{
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 15%;
+    justify-content: center;
+    transition: 300ms;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    opacity: 1 !important;
+    width: 100%;
+}
+
+#navbar li:hover{
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+#title{
+    opacity: 1 !important;
+    margin-bottom: 10px;
+    padding : 5px;
+}
+
+/* ------- Contenido principal -----------*/
+
+#content{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.5);
+    background-color: white;
+    min-height: 550px;
+    padding : 15px;
+}
+
+/*---------Footer-----------*/
+
+footer{
+    width: 80%;
+    height: 50px;
+    color: rgb(0, 0, 0, 0.7);
+    line-height: 50px;
+    text-align: right;
+    margin: 0 auto;
+    font-style: italic;
+}
+

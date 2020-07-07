@@ -1,11 +1,21 @@
+<!--Barra de Navegación-->
 
-<h1>Proyecto Angular</h1>
+<header>
+  <h1 id="title">Portafolio Personal</h1>
+  <ul id = navbar>
+    <li> <a [routerLink]="['/about']">Sobre Mi</a></li>
+    <li> <a [routerLink]="['/curriculo']">Curriculum</a></li>
+    <li> <a [routerLink]="['/projects']">Proyectos</a></li>
+    <li> <a [routerLink]="['/login']">Login</a></li>
+    <li> <a [routerLink]="['/contact']">Contacto</a></li>
+  </ul>
+</header>
 
-<ul>
-  <li> <a [routerLink] = "['/about']">Sobre Mi</a></li>
-  <li> <a [routerLink] = "['/projects']">Proyectos</a></li>
-  <li> <a [routerLink] = "['/create']">Crear Proyecto</a></li>
-  <li> <a [routerLink] = "['/contact']">Contacto</a></li>
-</ul>
 
-<router-outlet></router-outlet>
+<section id = content>
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Blog de Juan Jose Alvarez Villada &copy;
+</footer>
