@@ -13,7 +13,6 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
-import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
 
 @NgModule({
@@ -25,7 +24,6 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
     ContactComponent,
     ErrorComponent,
     LoginComponent,
-    CurriculumComponent,
   ],
   imports: [
     BrowserModule,

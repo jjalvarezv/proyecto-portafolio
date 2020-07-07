@@ -3,11 +3,10 @@
 <header>
   <h1 id="title">Portafolio Personal</h1>
   <ul id = navbar>
-    <li> <a [routerLink]="['/about']">Sobre Mi</a></li>
-    <li> <a [routerLink]="['/curriculo']">Curriculum</a></li>
-    <li> <a [routerLink]="['/projects']">Proyectos</a></li>
-    <li> <a [routerLink]="['/login']">Login</a></li>
-    <li> <a [routerLink]="['/contact']">Contacto</a></li>
+    <li [routerLinkActive] = "['routerLinkActive']"> <a [routerLink]="['/about']">Sobre Mi</a></li>
+    <li [routerLinkActive] = "['routerLinkActive']"> <a [routerLink]="['/projects']">Proyectos</a></li>
+    <li [routerLinkActive] = "['routerLinkActive']"> <a [routerLink]="['/login']">Login</a></li>
+    <li [routerLinkActive] = "['routerLinkActive']"> <a [routerLink]="['/contact']">Contacto</a></li>
   </ul>
 </header>
 
