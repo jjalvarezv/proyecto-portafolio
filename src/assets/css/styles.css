@@ -14,10 +14,11 @@
     margin: 0;
     padding: 0;
     font-family: titilium , Arial, Helvetica;
+    color: rgb(0, 0, 0, 0.8);
 }
 
 body{
-    font-size: 18px;
+    font-size: 17px;
     background-color: rgb(231, 231, 231);
     background-attachment: fixed;
 }
@@ -35,7 +36,6 @@ header{
     top: 0px;
     text-align: center;
     background-color: rgb(49, 49, 255, 0.6);
-    color: white;
     text-transform: uppercase;
     box-shadow: 0px 0px 3px 2px rgb(0, 0, 0, 0.4);
     margin-bottom: 13px;
@@ -61,6 +61,7 @@ header{
     color: white;
     opacity: 1 !important;
     width: 100%;
+    font-size: 18px;
 }
 
 #navbar li:hover{
@@ -71,6 +72,7 @@ header{
     opacity: 1 !important;
     margin-bottom: 10px;
     padding : 5px;
+    color: white;
 }
 
 /* ------- Contenido principal -----------*/
@@ -83,6 +85,41 @@ header{
     min-height: 550px;
     padding : 15px;
 }
+
+/* Formularios */
+.form-btn{
+    display: block;
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 5px;
+    font-weight: bolder;
+    min-width: 80px;
+    width : 30%;
+    transition: 300ms;
+    margin: 0 auto;
+}
+.form-input{
+    display: block;
+    min-width: 80px;
+    width : 30%;
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 3px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-label{
+    display: block;
+    min-width: 80px;
+    width : 30%;
+    margin: 0 auto;
+}
+
+.form-btn:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
 
 /*---------Footer-----------*/
 

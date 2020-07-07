@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// Para correcto funcionamiento de servicios 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Archivo de rutas en angular
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
