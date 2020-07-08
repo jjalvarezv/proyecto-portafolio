@@ -27,7 +27,7 @@ export class ProjectService {
         const headers = new HttpHeaders().set('Content-type','application/json');
 
         // Se hace la Peticion de Guardar al ApiRest
-        return this._http.post(this.url+'project/save-project',projectString,{headers: headers});
+        return this._http.post(this.url+'save-project',projectString,{headers: headers});
     }
 
 }

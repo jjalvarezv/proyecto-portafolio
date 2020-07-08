@@ -26,7 +26,7 @@
         <input type="text" name="langs" class="form-input" [(ngModel)]="project.langs" required>
 
         <label for="image" class="form-label">Imágen del Proyecto</label>
-        <input type="file" name="image" [(ngModel)]="project.image" >
+        <input type="file" name="image" [(ngModel)]="project.image" (change) = "fileChangeEvent($event)">
 
         <br />
         <input type="submit" value="Agregar" class="form-btn">
