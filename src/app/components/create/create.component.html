@@ -11,22 +11,27 @@
     <form action="#" id="form-create" #formLogin = "ngForm" (ngSubmit)="createProject(formLogin)">
 
         <label for="name" class="form-label">Nombre del Proyecto *</label>
-        <input type="text" name="name" class="form-input" [(ngModel)] = "project.name" required>
+        <input type="text" name="name" class="form-input" [(ngModel)] = "project.name" #name='ngModel' required>
 
         <label for="description" class="form-label">Descripción *</label>
-        <input type="text" name="description" class="form-input" [(ngModel)]="project.description" required>
+        <input type="text" name="description" class="form-input" [(ngModel)]="project.description" #descripcion='ngModel' required>
 
         <label for="category" class="form-label">Categoría *</label>
-        <input type="text" name="category" class="form-input" [(ngModel)]="project.category" required>
+        <input type="text" name="category" class="form-input" [(ngModel)]="project.category" #category='ngModel' required>
 
         <label for="year" class="form-label">Año *</label>
-        <input type="number" name="year" class="form-input" [(ngModel)]="project.year" required>
+        <input type="number" name="year" class="form-input" [(ngModel)]="project.year" #year='ngModel' required>
 
         <label for="langs" class="form-label">Lenguajes usados *</label>
-        <input type="text" name="langs" class="form-input" [(ngModel)]="project.langs" required>
+        <input type="text" name="langs" class="form-input" [(ngModel)]="project.langs" #langs='ngModel' required>
 
-        <label for="image" class="form-label">Imágen del Proyecto</label>
-        <input type="file" name="image" [(ngModel)]="project.image" (change) = "fileChangeEvent($event)">
+        <label for="image" class="form-label">Imágen del Proyecto *</label>
+        <input type="file" name="image" [(ngModel)]="project.image" (change) = "fileChangeEvent($event)" #img='ngModel' required>
 
         <br />
         <input type="submit" value="Agregar" class="form-btn">
+        <span class="requerido" 
+            *ngIf = "(name.touched && !name.valid) || (descripcion.touched || !descripcion.valid) &&
+            (category.touched && !category.valid) || (year.touched && !year.valid) ||
+            (langs.touched && !langs.valid) || (img.touched && !img.valid)"
+        >Aún faltan campos por completar</span>

@@ -32,27 +32,33 @@ export class CreateComponent implements OnInit {
 	}
 
 	createProject(formulario: any) {
-		console.log(this.project);
-		// Llamo a mi servicio de projects y me suscribo a lo que retorne la peticion
-		this._projectSevice.saveProject(this.project).subscribe(
-			response => {
+		if (!formulario.valid) {
+			alert('El formulario no es válido, complete todos los campos');
+		} else {
+			// Llamo a mi servicio de projects y me suscribo a lo que retorne la peticion
+			this._projectSevice.saveProject(this.project).subscribe(
+				response => {
 
-				// Subir imagenes
-				this._uploadService.makeFileRequest(this.url + '/upload-img/' + response.project._id, [], this.filesToUpload, 'image')
-					// El metodo makeFileRequest retorna una promesa, con then se recogen los datos	
-					.then((result) => {
-						console.log('El projecto se ha guardado');
-						console.log(result);
-						formulario.reset();
-					})
-					.catch((err) => {
-						console.log(err);
-					});	
-			},
-			err => {
-				console.log(err);
-			}
-		);
+					// Subir imagenes
+					let formData = new FormData();
+					// recorrer el array de files
+					for (let i = 0; i < this.filesToUpload.length; i++) {
+						formData.append('image', this.filesToUpload[i], this.filesToUpload[i].name);
+					}
+					// hago uso de mi servicio upload para subir la imagen
+					this._uploadService.makeFileRequest(formData, response.project._id).subscribe(
+						response => {
+							console.log('El proyecto se ha guardado');
+							formulario.reset();
+						},
+						err => console.log(err)
+					);
+				},
+				err => {
+					console.log(err);
+				}
+			);
+		}
 	}
 
 	fileChangeEvent(fileInput: any) {
