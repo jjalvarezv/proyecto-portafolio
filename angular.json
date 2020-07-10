@@ -90,7 +90,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "nodemodules/jquery/dist/jquery.min.js"
+            ]
           }
         },
         "lint": {

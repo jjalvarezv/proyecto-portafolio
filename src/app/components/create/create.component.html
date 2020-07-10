@@ -29,9 +29,12 @@
         <input type="file" name="image" [(ngModel)]="project.image" (change) = "fileChangeEvent($event)" #img='ngModel' required>
 
         <br />
-        <input type="submit" value="Agregar" class="form-btn">
-        <span class="requerido" 
-            *ngIf = "(name.touched && !name.valid) || (descripcion.touched || !descripcion.valid) &&
+        <input type="submit" value="Agregar" class="form-btn" #btn>
+        <span class="requerido">Aún faltan campos por completar</span>
+        <span class="succesful">Proyecto creado exitosamente.</span>
+
+    <!--
+        *ngIf = "(name.touched && !name.valid) || (descripcion.touched || !descripcion.valid) &&
             (category.touched && !category.valid) || (year.touched && !year.valid) ||
-            (langs.touched && !langs.valid) || (img.touched && !img.valid)"
-        >Aún faltan campos por completar</span>
+            (langs.touched && !langs.valid) || (img.touched && !img.valid)" 
+    -->
