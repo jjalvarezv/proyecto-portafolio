@@ -136,7 +136,7 @@ header{
     color: white;
 }
 
-.requerido{
+.requerido, .invalid{
     font-size: 15px;
     font-style: italic;
     font-weight: bold;

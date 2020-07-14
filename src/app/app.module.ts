@@ -13,6 +13,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
+import { LoggedComponent } from './components/logged/logged.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { LoginComponent } from './components/login/login.component';
     ContactComponent,
     ErrorComponent,
     LoginComponent,
+    LoggedComponent,
   ],
   imports: [
     BrowserModule,
